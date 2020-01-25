@@ -8,9 +8,7 @@ public class Seasons {
 
         inputMonth = scnr.nextLine();
         inputDay = scnr.nextInt();
-        System.out.print(inputMonth + " ");
-        System.out.print(inputDay);
-        System.out.println("");
+
 
         if (inputMonth.equals("March")){
             if (inputDay < 20 && inputDay > 0){
@@ -59,6 +57,54 @@ public class Seasons {
                 System.out.print("Invalid");
             }
 
+        }
+        else if (inputMonth.equals("April")){
+                if (inputDay > 0 && inputDay < 31){
+                    System.out.print("Spring");
+                }
+                else{
+                    System.out.print("Invalid");
+                }
+        }
+        else if (inputMonth.equals("May")){
+            if (inputDay > 0 && inputDay < 32){
+                System.out.print("Spring");
+            }
+            else{
+                System.out.print("Invalid");
+            }
+        }
+        else if (inputMonth.equals("July")){
+            if (inputDay > 0 && inputDay < 32){
+                System.out.print("Summer");
+            }
+            else{
+                System.out.print("Invalid");
+            }
+        }
+        else if (inputMonth.equals("August")){
+            if (inputDay > 0 && inputDay < 32){
+                System.out.print("Summer");
+            }
+            else{
+                System.out.print("Invalid");
+            }
+        }
+        else if (inputMonth.equals("October")){
+            if (inputDay > 0 && inputDay < 32){
+                System.out.print("Autumn");
+            }
+            else{
+                System.out.print("Invalid");
+            }
+        }
+        else if (inputMonth.equals("November")){
+            if (inputDay > 0 && inputDay < 31){
+                System.out.print("Autumn");
+            }
+            else{
+                System.out.print("Invalid");
+            }
         }
         else{
             System.out.print("Invalid");
