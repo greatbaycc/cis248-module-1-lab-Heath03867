@@ -1,22 +1,23 @@
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class NameFormat {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String firstName;
-        String middleName;
-        String lastName;
-        String temp;
+        String fullName = input.nextLine(); //Grabs the entire name, including spaces
+        StringTokenizer tokenizer = new StringTokenizer(fullName);
 
-        firstName = input.next().strip();
-        temp = input.next().strip();
-        lastName = input.nextLine().strip(); //finalize the line of input and is empty if there is no third name
+        String firstName = tokenizer.nextToken().strip();
+        String temp = tokenizer.nextToken().strip();
 
-        if (lastName.isBlank()) {
-            lastName = temp;
-            middleName = null;
-        } else {
+        String middleName, lastName;
+
+        if (tokenizer.hasMoreTokens()) {
             middleName = temp;
+            lastName = tokenizer.nextToken();
+        } else {
+            middleName = null;
+            lastName = temp;
         }
 
         if (middleName == null){
@@ -24,7 +25,6 @@ public class NameFormat {
         } else {
             System.out.println(lastName + ", " + firstName + " " + middleName.charAt(0) + ".");
         }
-
     }
 }
 
