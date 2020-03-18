@@ -17,6 +17,12 @@ public class DrawHalfArrow {
 
         System.out.println("Enter arrow head width:");
         arrowHeadWidth = scnr.nextInt();
+
+        while (arrowHeadWidth <= arrowBaseWidth){
+            System.out.println("Enter arrow head width:");
+            arrowHeadWidth = scnr.nextInt();
+        }
+
         System.out.println("");
 
         // Draw arrow base (height = 3, width = 2)
@@ -30,10 +36,12 @@ public class DrawHalfArrow {
         }
 
         // Draw arrow head (width = 4)
-        /**
-        System.out.println("****");
-        System.out.println("***");
-        System.out.println("**");
-        System.out.println("*");**/
+
+        for (i = arrowHeadWidth; i > 0; --i){
+            for (j = 0; j < i; ++j){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
     }
 }
