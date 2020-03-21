@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class PlayerRoster {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
-        int jersey[] = new int[5];
-        int rating[] = new int[5];
+        int[] jersey = new int[5];
+        int[] rating = new int[5];
         int index = 1;
         int pJersey;
         int pRating;
